@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mydeals247App</title>
+
+  <%= stylesheet_link_tag :application , :media => "all"%>
+  <%= javascript_include_tag :application %>
+  <%= csrf_meta_tags %>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="header">
+      <h1 style="margin-bottom:0;"><%= link_to "Mydeals247" , "/"%></h1>
+    </div>
+
+<div class="flash">
+<%#= flash[:notice] if flash%>
+</div>
+<p class="notice" style="color: red;"><%= notice %></p>
+<p class="alert" style="color: red;"><%= alert %></p>
+
+
+<div class="login_info">
+<% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% else %>
+      <%#= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <% end %>
+</div>
+ <div class="span9"><%= yield %></div>
+
+
+</body>
+<div class="footer">
+''
+</div>
+</html>

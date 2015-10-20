@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Thanks for registration</title>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+      body {font-family: 'Source Sans Pro', sans-serif; margin:0px;}
+  </style>
+</head>
+
+<body>
+<div style="width:720px; margin:0 auto; background:url(http://bloc.thehindu.co.in/kreatio/images/email_bg.jpg) no-repeat 0 0; text-align:center; padding:61px 0 0;">
+  <h1 style="font-weight:normal; color:#002957; line-height:39px; margin:0; font-size:36px;">
+    <label style="font-weight:300; color:#dadbdc;">Thank you for subscribing with</label></h1>
+  <div style="width:495px; margin:50px auto 0;">
+    <img src="http://bloc.thehindu.co.in/kreatio/images/bloc_mac.png" border="0" usemap="#Map"/>
+    <map name="Map">
+      <area shape="rect" coords="65,19,430,249" href="#">
+    </map>
+  </div>
+  <h1 style="font-weight:normal; color:#002957; line-height:39px; margin:0; font-size:36px; margin-top:30px;">Hi <%= @user.first_name  %></h1>
+  <p style="font-family: 'Open Sans', sans-serif; font-weight:400; color:#002957; font-size:23px; line-height:36px; margin:20px 0 53px;">
+    You are successfully created your account.<br>
+    Now you can login with your <br>
+    Email id: <%= @user.email %>  <br>
+  </p>
+<span style="display:block; width:100%; font-weight:300; color:#dadbdc;padding:0px 0 20px;">
+<label style="font-size:18px;">Thanks<br>
+  MyDeals247</label>
+</span>
+  <a href='http://bloc.thehindu.co.in'>
+    <input type="submit" value="" style="background:url(http://bloc.thehindu.co.in/kreatio/images/explore-now.png) no-repeat 0 0; border:0px; width:193px; height:43px; margin:0 auto 59px; text-indent:-9999px; cursor:pointer;">
+  </a></div>
+</body>
+</html>

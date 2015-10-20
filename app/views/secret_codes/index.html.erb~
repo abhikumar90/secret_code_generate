@@ -1,0 +1,65 @@
+<%if current_user.email == "admin@admin.com"%>
+<h2>Listing Secret Codes</h2>
+
+<div class="form_data" style="float:right;">
+  <%= form_tag secret_codes_path, :method => 'post'  do%>
+      <%= select_tag :create_secret_key_drop_down, options_for_select(["1", "10","20"],10), :prompt => "Select value",:class=>"select_box" %>
+      <div class="button">
+      <%=submit_tag 'Generate Secret Code'%>
+      </div>
+  <%end%>
+</div>
+
+<table border=4>
+  <thead>
+  <tr>
+    <th>Secret Code</th>
+    <th>User Email</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @secret_codes.each do |secret_code| %>
+      <tr>
+        <td>
+          <% if secret_code.user.present? %>
+            <%= secret_code.code %>
+          <% else %>
+    <%= link_to secret_code.code, "#{new_user_registration_path}?id=#{secret_code.id}" %>
+          <% end %>
+        </td>
+        <td><%= secret_code.user_email %></td>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<br>
+<div class="button">
+<%= link_to 'Click here for New Secret code', new_secret_code_path %></br>
+</div>
+<div class="button">
+<%= link_to 'Registered User Information ',{:controller=>'secret_codes',:action => 'registered_user_information_json'} %>
+</div>
+<%else%>
+  <table border=4>
+  <thead>
+  <tr>
+    <th>Secret Code</th>
+    <th>User Email</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% [current_user].each do |cu| %>
+      <tr>
+        <td>
+            <%= cu.secret_code.code %>
+        </td>
+        <td><%= cu.email %></td>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%end%>

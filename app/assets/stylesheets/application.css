@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.button {background:#6A8B92;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;display:inline;display:inline-block;margin-left: 328px;}
+.button a {color:#fff;border-radius: 5px 5px 5px 5px;font-family:arial;cursor:pointer;display:inline-block;padding:5px;margin: 1px 3px;font-weight: normal;text-decoration: none;/*height:17px;*/}
+.button a:hover {text-decoration: none !important;background: #94b5bc;}
+
+.flash{
+  color: red;
+}
+.select_box {border: 1px solid #CFCFCF;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;width: 248px;height: 24px;padding-left: 3px;}
+.form_data {
+    margin: 25px;
+}
+
+.field {
+    margin: 12px 0 10px 7px;
+}
+
+.button {
+    margin: 19px 30px;
+}
+
+#user_first_name {
+    margin-left: 75px;
+}
+
+#user_last_name {
+    margin-left: 78px;
+}
+#user_email {
+    margin-left: 119px;
+}
+.field > input {
+    margin-left: 17px;
+}
+
+#user_password {
+    margin-left: 174px;
+}
+
+#user_password_confirmation {
+    margin-left: 16px;
+}
+.button > input {
+    margin: 0 1px;
+    padding-top: 2px;
+}
+.header{
+    font-size: 20px;
+    background:url('/assets/park4.jpg');
+    padding-left: 457px;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0) url("/assets/park4.jpg") repeat scroll 0 0;
+ position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+}
+
+h1,h2 {
+    color: skyblue;
+}
+
+.login_info {
+    margin: 22px 0 0 844px;
+}
+
+.span9 {
+    margin-left: 35px;
+}
+
+
+
+.group_fixed input {
+    border: 1px solid #ccc;
+    float: left;
+    font-family: "arial";
+    font-size: 14px;
+    padding: 6px 10px;
+    width: 22%;
+}
+
+.group_fixed{float:left;width:100%;padding-bottom:20px;font-size:14px;font-family:"arial"}
+.group_fixed label{float:left;width:25%;padding-top:6px;}
+fieldset {
+    width: 129px;
+}
